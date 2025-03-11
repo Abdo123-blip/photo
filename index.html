@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صور مع وصف</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            width: 200px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        img:hover {
+            transform: scale(1.1);
+        }
+        #descBox {
+            display: none;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+        }
+        #descBox button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>اضغط على أي صورة لعرض الوصف</h1>
+
+     <img src="bird.jpg" onclick="showDescription('Aho el 3sfora de cute w 3asal zayk kda bzbt')">
+         <img src="sea.jpg" onclick="showDescription('El mkan da 3amel zayk kda bzbt howa mkan deep gdn lw baseti mn kol na7ya ba7r mlyan details w 7ekayat w 7agat deep bs enty btkoni wa5da el qrar enk tfdli fo2 3la el gzera de bs awl lma trta7i btnoti w tnzli w t2oli el 7agat el deep')">
+          <img src="white.jpg" onclick="showDescription('lon abyad da aktr 7aga lay2a 3liki 7aga ndefa pure mlyana 7ob w gmal')">
+     <img src="winter.jpg" onclick="showDescription('Aho el 4eta da byfrni beki kda motqlb el a7wal el gwaya zayk kda')">
+         <img src="yasmin.jpg" onclick="showDescription('Bosi da nbat el yasmin w enty 3amla zayo kda 34an el yasmin aktr 7aga bytmyz beha eno pure w y4dk kda tngzblo')">
+     <img src="pizza.jpg" onclick="showDescription('Aho el pizza de zay ma hya 8r2ana fe el gebna enty kman 8r2ana fe tfasel w 7ekayat w 3ndk 7agat 7elwa kteer awi w kolhom 3la ba3d bytl3o 7aga gamda gdn')">
+     <img src="manga.jpg" onclick="showDescription('Aho enty btfkrini b 3aser el manga da ynf3 fe ay wa2t w ay monsba m4 t2eel 3la el wa7ed mfee4 atnen y5tlfo 3leh sahl kda w ta3mo 7elw w tnbst w enta bt4rbo')">
+     <img src="dory.jpg" onclick="showDescription('Aho enty btfkrini b dory de gdn wrbna so8nona kda w btnsa bs tayba w gmeela gdn w 3asola')">
+     <img src="camera.jpg" onclick="showDescription('El hobby ely btfkrni beki hya el tsweer 34an el hobby de bthtm b el details awi w el wa2t w el la7za el monasba tefdl mstni w t7alel l8ayt lma tla2i el forsa el monasba w tek ta5od el sora b el details bta3tha')">
+
+ 
+
+    <div id="descBox">
+        <p id="descText"></p>
+        <button onclick="hideDescription()">إغلاق</button>
+    </div>
+
+    <script>
+        function showDescription(text) {
+            document.getElementById('descText').innerText = text;
+            document.getElementById('descBox').style.display = 'block';
+        }
+
+        function hideDescription() {
+            document.getElementById('descBox').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
